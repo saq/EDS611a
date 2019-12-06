@@ -3,21 +3,28 @@ title: "Upload instructions and tips"
 author: "FES611a"
 date: "12/5/2019"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 Hello,
 
 Here's an outline for the final presentation where everyone's work takes up one slide.
 There are multiple ways to do this:
-  1) embed the code and run it through the R each time
-  2) do all the preprocessing on your personal computer -> save final plots as an image -> upload the image onto a common directory (say on Canvas)
-  3) repeat steps in (2) but before you upload the plot, make a poster of it (in powerpoint, inkscape, etc) and then upload that poster (as an image) onto the directory
+
+  -1) do all the preprocessing on your personal computer -> save final plots as an image ->
+  upload the image onto a common directory (say on Canvas)
+  -2) repeat steps in (1) but before you upload the plot, make a poster of it (in
+  powerpoint, inkscape, etc) and then upload that poster (as an image) onto the directory
   
-Method 1) is going to be hardest to put together, because it'll take a lot of time to run the code and we'll need all the datafiles (kindly email [Akshay](akshay.surendra@yale.edu) who'll put it together)
-Method 2) is ideal if you don't need too much text around your final plot - if your plot labels, title etc. are sufficiently informative
-Method 3) is ideal if you need to add some description around your final plot
+Method 1) is ideal if you don't need too much text around your final plot - if your plot labels, title etc. are sufficiently informative - you can add some text in the .Rpres file though
+
+Method 2) is ideal if you need to add some description around your final plot that is not otherwise possible in the .Rpres file
+
+Please make sure to include the following in your presentation:
+ - Question
+ - Technical Challenge
+ - Solution
 
 #Saving your figures in R
 
@@ -51,7 +58,7 @@ ggsave(filename = "EDoutput_trial.png",
 ```
 
  - if you have multiple plots, you can use par(mfrow = c(rows,columns)) in base-R or use grid.arrange(c(plot1,plot2,...plotn),nrow = rows, ncol = columns) from the gridExtra package
- - Some resources to do this in [](base-R)
- - Some resources to do this with ggplot objects with [](`gridExtra`) and [](`cowPlot`)
+ - Some resources to do this in [base-R](https://www.statmethods.net/advgraphs/layout.html)
+ - Some resources to do this with ggplot objects with [`gridExtra`](https://www.r-bloggers.com/extra-extra-get-your-gridextra/) or [`cowPlot`](https://cran.rstudio.com/web/packages/cowplot/vignettes/introduction.html]) or the fresh-from-the-CRAN-oven [`patchwork`](https://patchwork.data-imaginist.com/) package
  - Once you save the plot, you can read images into the .Rpres file (example shown in the .Rpres file)
  - If you use Python, you an ignore this document and directly upload the figure onto the .Rpres file (through R though)

@@ -370,8 +370,11 @@ summary {
 
 
 <p>Hello,</p>
-<p>Here’s an outline for the final presentation where everyone’s work takes up one slide. There are multiple ways to do this: 1) embed the code and run it through the R each time 2) do all the preprocessing on your personal computer -&gt; save final plots as an image -&gt; upload the image onto a common directory (say on Canvas) 3) repeat steps in (2) but before you upload the plot, make a poster of it (in powerpoint, inkscape, etc) and then upload that poster (as an image) onto the directory</p>
-<p>Method 1) is going to be hardest to put together, because it’ll take a lot of time to run the code and we’ll need all the datafiles (kindly email <a href="akshay.surendra@yale.edu">Akshay</a> who’ll put it together) Method 2) is ideal if you don’t need too much text around your final plot - if your plot labels, title etc. are sufficiently informative Method 3) is ideal if you need to add some description around your final plot</p>
+<p>Here’s an outline for the final presentation where everyone’s work takes up one slide. There are multiple ways to do this:</p>
+<p>-1) do all the preprocessing on your personal computer -&gt; save final plots as an image -&gt; upload the image onto a common directory (say on Canvas) -2) repeat steps in (1) but before you upload the plot, make a poster of it (in powerpoint, inkscape, etc) and then upload that poster (as an image) onto the directory</p>
+<p>Method 1) is ideal if you don’t need too much text around your final plot - if your plot labels, title etc. are sufficiently informative - you can add some text in the .Rpres file though</p>
+<p>Method 2) is ideal if you need to add some description around your final plot that is not otherwise possible in the .Rpres file</p>
+<p>Please make sure to include the following in your presentation: - Question - Technical Challenge - Solution</p>
 <p>#Saving your figures in R</p>
 <ul>
 <li>By default, powerpoint uses a 13.3 inch x 7.5 inch screen size, so it’ll be great if all your figures are formatted to fit this</li>
@@ -404,8 +407,8 @@ ggsave(filename = &quot;EDoutput_trial.png&quot;,
        width = 5,height = 6,units = &quot;in&quot;,dpi = 300) #saves the object to a file with a specific format, size and resolution (dpi)</code></pre>
 <ul>
 <li>if you have multiple plots, you can use par(mfrow = c(rows,columns)) in base-R or use grid.arrange(c(plot1,plot2,…plotn),nrow = rows, ncol = columns) from the gridExtra package</li>
-<li>Some resources to do this in <a href="base-R"></a></li>
-<li>Some resources to do this with ggplot objects with <a href="%60gridExtra%60"></a> and <a href="%60cowPlot%60"></a></li>
+<li>Some resources to do this in <a href="https://www.statmethods.net/advgraphs/layout.html">base-R</a></li>
+<li>Some resources to do this with ggplot objects with <a href="https://www.r-bloggers.com/extra-extra-get-your-gridextra/"><code>gridExtra</code></a> or <a href="https://cran.rstudio.com/web/packages/cowplot/vignettes/introduction.html%5D"><code>cowPlot</code></a> or the fresh-from-the-CRAN-oven <a href="https://patchwork.data-imaginist.com/"><code>patchwork</code></a> package</li>
 <li>Once you save the plot, you can read images into the .Rpres file (example shown in the .Rpres file)</li>
 <li>If you use Python, you an ignore this document and directly upload the figure onto the .Rpres file (through R though)</li>
 </ul>
