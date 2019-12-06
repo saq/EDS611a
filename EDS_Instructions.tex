@@ -1,0 +1,225 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Upload instructions and tips},
+            pdfauthor={FES611a},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Upload instructions and tips}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{FES611a}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{12/5/2019}
+
+
+\begin{document}
+\maketitle
+
+Hello,
+
+Here's an outline for the final presentation where everyone's work takes
+up one slide. There are multiple ways to do this: 1) embed the code and
+run it through the R each time 2) do all the preprocessing on your
+personal computer -\textgreater{} save final plots as an image
+-\textgreater{} upload the image onto a common directory (say on Canvas)
+3) repeat steps in (2) but before you upload the plot, make a poster of
+it (in powerpoint, inkscape, etc) and then upload that poster (as an
+image) onto the directory
+
+Method 1) is going to be hardest to put together, because it'll take a
+lot of time to run the code and we'll need all the datafiles (kindly
+email \href{akshay.surendra@yale.edu}{Akshay} who'll put it together)
+Method 2) is ideal if you don't need too much text around your final
+plot - if your plot labels, title etc. are sufficiently informative
+Method 3) is ideal if you need to add some description around your final
+plot
+
+\#Saving your figures in R
+
+\begin{itemize}
+\tightlist
+\item
+  By default, powerpoint uses a 13.3 inch x 7.5 inch screen size, so
+  it'll be great if all your figures are formatted to fit this
+\item
+  if you're using \texttt{base-R}, you could save plots this way -
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#all your code goes up here}
+\KeywordTok{data}\NormalTok{(}\StringTok{"mtcars"}\NormalTok{)}
+\NormalTok{dat<-}\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{scale}\NormalTok{(mtcars}\OperatorTok{$}\NormalTok{mpg),}\DataTypeTok{y =} \KeywordTok{scale}\NormalTok{(mtcars}\OperatorTok{$}\NormalTok{hp))}
+
+\KeywordTok{png}\NormalTok{(}
+  \DataTypeTok{file=}\StringTok{"EDSoutput_trial.png"}\NormalTok{,}
+  \DataTypeTok{width=}\DecValTok{6}\NormalTok{, }\DataTypeTok{height=}\DecValTok{4}\NormalTok{, }\DataTypeTok{units=}\StringTok{"in"}\NormalTok{,}
+  \DataTypeTok{res=}\DecValTok{300}\NormalTok{) }\CommentTok{# this creates an empty .png file with these specification of width, height in inches and with a resolution of 300 pixels/square-inch}
+
+\KeywordTok{plot}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dat}\OperatorTok{$}\NormalTok{x,}\DataTypeTok{y =}\NormalTok{ dat}\OperatorTok{$}\NormalTok{y) }\CommentTok{#this is the plot that fills the file}
+
+\KeywordTok{dev.off}\NormalTok{() }\CommentTok{#this tells R to stop filling the .png}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{itemize}
+\item
+  There are lots of resources online to figure out what works best, like
+  this
+  \href{'https://www.datamentor.io/r-programming/saving-plot/'}{link}.
+\item
+  Alternatively, you could use \texttt{ggsave()} for a \texttt{ggplot}
+  object:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{data}\NormalTok{(}\StringTok{"diamonds"}\NormalTok{)}
+\NormalTok{fig1<-}\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ diamonds) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y=}\NormalTok{carat,}\DataTypeTok{x=}\NormalTok{price)) }\OperatorTok{+}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }\CommentTok{#store your figure in an object}
+
+\KeywordTok{ggsave}\NormalTok{(}\DataTypeTok{filename =} \StringTok{"EDoutput_trial.png"}\NormalTok{,}
+       \DataTypeTok{plot =}\NormalTok{ fig1,}\DataTypeTok{device =} \StringTok{"png"}\NormalTok{,}
+       \DataTypeTok{width =} \DecValTok{5}\NormalTok{,}\DataTypeTok{height =} \DecValTok{6}\NormalTok{,}\DataTypeTok{units =} \StringTok{"in"}\NormalTok{,}\DataTypeTok{dpi =} \DecValTok{300}\NormalTok{) }\CommentTok{#saves the object to a file with a specific format, size and resolution (dpi)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  if you have multiple plots, you can use par(mfrow = c(rows,columns))
+  in base-R or use grid.arrange(c(plot1,plot2,\ldots plotn),nrow = rows,
+  ncol = columns) from the gridExtra package
+\item
+  Some resources to do this in \href{base-R}{}
+\item
+  Some resources to do this with ggplot objects with
+  \href{\%60gridExtra\%60}{} and \href{\%60cowPlot\%60}{}
+\item
+  Once you save the plot, you can read images into the .Rpres file
+  (example shown in the .Rpres file)
+\item
+  If you use Python, you an ignore this document and directly upload the
+  figure onto the .Rpres file (through R though)
+\end{itemize}
+
+
+\end{document}

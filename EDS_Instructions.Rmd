@@ -2,7 +2,9 @@
 title: "Upload instructions and tips"
 author: "FES611a"
 date: "12/5/2019"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 Hello,
@@ -27,7 +29,7 @@ data("mtcars")
 dat<-data.frame(x = scale(mtcars$mpg),y = scale(mtcars$hp))
 
 png(
-  file="./correctpath/EDSoutput_trial.png",
+  file="EDSoutput_trial.png",
   width=6, height=4, units="in",
   res=300) # this creates an empty .png file with these specification of width, height in inches and with a resolution of 300 pixels/square-inch
 
@@ -43,7 +45,7 @@ library(ggplot2)
 data("diamonds")
 fig1<-ggplot(data = diamonds) + geom_point(aes(y=carat,x=price)) + theme_bw() #store your figure in an object
 
-ggsave(filename = "./correctpath/EDoutput_trial.png",
+ggsave(filename = "EDoutput_trial.png",
        plot = fig1,device = "png",
        width = 5,height = 6,units = "in",dpi = 300) #saves the object to a file with a specific format, size and resolution (dpi)
 ```
